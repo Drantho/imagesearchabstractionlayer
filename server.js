@@ -11,7 +11,7 @@ var Bing = require('node-bing-api')({ accKey: process.env.API_KEY });
 
 router.get('/', function (req, res, next) {
   res.type('text/html');
-  res.send('Enter /api then a search term(?search=) and a page (&page=#) in the URL to search photos.');
+  res.send('Enter /api/imagesearch/ then a search term and optionally an offset (?offset=#) in the URL to search photos.<br>/searchhistory to view recent searches.');
 });
 
 router.get('/searchhistory', function (req, res, next) {
